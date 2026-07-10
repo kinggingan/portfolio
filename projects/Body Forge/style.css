@@ -1,0 +1,367 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* --- Utility Classes & Base Styles --- */
+
+/* Section Padding */
+section {
+  padding: 90px 10%;
+}
+
+h2 {
+  color: #ff4500;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* CTA Button */
+.btn {
+  display: inline-block;
+  background: #ff4500;
+  padding: 14px 40px;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  border: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #ff5a1f;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button Style for Tiers */
+.btn-tier {
+  padding: 10px 30px;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* --- Navigation Bar --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10%;
+  background: linear-gradient(180deg, #e13e03f0, #000000);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #111;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff4500;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+/* Navigation links */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+/* Applying button-like design to all navigation links */
+.nav-btn-style {
+  padding: 8px 20px;
+  border-radius: 40px;
+  transition: 0.3s ease;
+  margin-right: -13px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  /* Replaces the old underline with the button styling */
+  color: #fff !important;
+  background: #ff4500;
+  border-bottom: none !important;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: url("assets/ye.jpg") no-repeat center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Dark overlay for readability */
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+  backdrop-filter: blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 750px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3.8rem; /* Slightly larger */
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ff4500;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #e6e6e6;
+}
+
+/* --- About Section --- */
+.about {
+  background: #101010;
+  text-align: center;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  color: #ccc;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* --- Programs/Services Section (Kept) --- */
+.programs {
+  background: #0b0b0b;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #101010;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  border-left: 3px solid #ff4500;
+  border-bottom: 3px solid #ff4500;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  background: #151515;
+}
+
+.program-card i {
+  font-size: 3rem;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.program-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.program-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* --- New: Benefits/Goals Section (Updated Membership Tiers) --- */
+.membership {
+  background: #101010;
+  padding-bottom: 120px;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tier-card {
+  background: #0b0b0b;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tier-card:hover {
+  border-color: #ff4500;
+}
+
+.tier-card.featured {
+  background: #161616;
+  border: 3px solid #ff4500;
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.3);
+}
+
+.tier-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff4500;
+}
+
+/* New style for benefit summary */
+.benefit-summary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ff4500;
+  border-top: 2px solid #ff4500;
+}
+
+.tier-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: left;
+  flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+.tier-card ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f1f1f;
+  color: #e6e6e6;
+  font-size: 1.05rem;
+}
+
+.tier-card ul li i {
+  margin-right: 10px;
+}
+
+.tier-card ul li .fa-check-circle {
+  color: #4caf50; /* Green checkmark */
+}
+
+/* --- Footer --- */
+footer {
+  background: #0d0d0d;
+  padding: 40px 10%;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
+.social-icons a {
+  color: #ff4500;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+  font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+  color: #ff6a2d;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 5%;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  section {
+    padding: 70px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  .program-card,
+  .tier-card {
+    padding: 20px;
+  }
+  .program-grid,
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-card.featured {
+    transform: scale(1);
+  }
+}

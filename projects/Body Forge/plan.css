@@ -1,0 +1,105 @@
+   /* Page Layout */
+  
+    .plan-section {
+      padding: 100px 10%;
+      text-align: center;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+
+    .plan-section h2 {
+      color: #ff4500;
+      margin-bottom: 10px;
+    }
+
+    .plan-section p {
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .plan-form {
+      background: #1a1a1a;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background: #222;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    select:focus {
+      outline: 2px solid #ff4500;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4500;
+      color: #fff;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff6600;
+    }
+
+    /* Hidden Plans */
+    .plan-output {
+      display: none;
+      background: #1a1a1a;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 12px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .plan-output h3 {
+      color: #ff4500;
+      margin-bottom: 10px;
+    }
+
+    .plan-output ul {
+      color: #ccc;
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    /* Show output when targeted */
+    #beginner:target,
+    #intermediate:target,
+    #advanced:target {
+      display: block;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #ff4500;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #ff6600;
+    }

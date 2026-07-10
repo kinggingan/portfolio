@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strength Selection - BodyForge</title>
+    <!-- Using the general styling -->
+    <link rel="stylesheet" href="../second.css" />
+    <!-- Custom styling for the day slider -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="BodyForge Logo" />
+        <h2>Body Forge</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="../home.html" class="nav-btn-style active">Home</a></li>
+          <li><a href="../worksout.html" class="nav-btn-style">Workouts</a></li>
+          <li><a href="../contact.html" class="nav-btn-style">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Workout Selection Section -->
+    <section class="workout-section">
+      <h2>Select your Strength Training Intensity</h2>
+      <p>
+        Choose the plan that matches your current fitness level. All programs
+        are designed to improve muscle mass, raw power, and structural strength
+        through guided lifting workouts.
+      </p>
+
+      <!-- Using the consistent workout-grid class -->
+      <div class="workout-grid">
+        <!-- Newbie Plan Card (Now using workout-card structure) -->
+        <div class="workout-card">
+          <!-- Placeholder Image - Customize this path! -->
+          <img src="../assets/newb.png" alt="Newbie runner on track" />
+          <div class="card-body">
+            <h2>Newbie</h2>
+            <p>
+              Ideal for beginners or those new to lifting. Focuses on mastering
+              fundamental movement patterns (squat, hinge, press, lifting and
+              etc..), building core stability , and light muscle stimulus. 3
+              Days in total.
+            </p>
+            <!-- Link to the detail page (Day 1 by default) -->
+            <a href="str_noob.html" class="btn">Start Newbie Plan</a>
+          </div>
+        </div>
+
+        <!-- Intermediate Plan Card (Now using workout-card structure) -->
+        <div class="workout-card">
+          <!-- Placeholder Image - Customize this path! -->
+          <img src="../assets/inter.jpg" alt="Person doing battle ropes" />
+          <div class="card-body">
+            <h2>Intermediate</h2>
+            <p>
+              For those with moderate lifting experience. Includes Hypertrophy
+              and Strength blocks, and progressive overload strategies for the
+              balanced muscle development. 6 Days in total.
+            </p>
+            <!-- Link to the detail page (Day 1 by default) -->
+            <a href="str_inter.html" class="btn" style="margin-top: 30px"
+              >Go Intermediate</a
+            >
+          </div>
+        </div>
+
+        <!-- Advanced Plan Card (Now using workout-card structure) -->
+        <div class="workout-card">
+          <!-- Placeholder Image - Customize this path! -->
+          <img src="../assets/master.png" alt="Sprinter on race track" />
+          <div class="card-body">
+            <h2>Advanced</h2>
+            <p>
+              Designed for high-performance lifters. Features Complex
+              periodization, high-volume intensity techniques, and specialized
+              lifts to maximize absolute strength and lean mass gains. 9 Days in
+              total.
+            </p>
+            <!-- Link to the detail page (Day 1 by default) -->
+            <a href="str_adv.html" class="btn">Master Advanced</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 BodyForge Fitness. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

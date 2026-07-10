@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arjujean S. Kinggingan | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="logo">Arjujean<span></span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="navMenu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-text">
+    <p class="eyebrow">Hello, I'm</p>
+    <h1>Arjujean S.<br>Kinggingan</h1>
+    <p class="role">Aspiring Web Developer</p>
+    <p class="lede">I build clean, responsive websites and keep sharpening my
+      front-end and problem-solving skills through hands-on projects.</p>
+
+  </div>
+  <div class="hero-photo">
+    <div class="photo">
+      <img src="assets/me.png" alt="Arjujean S. Kinggingan">
+    </div>
+  </div>
+</header>
+
+
+<section id="about" class="section">
+  <p class="section-tag">About Me</p>
+  <h2 class="section-title">Get to know me</h2>
+
+  <p class="section-lede">
+    I'm an aspiring web developer passionate about creating clean and responsive websites.
+    Outside of coding, I enjoy running, cycling, mobile gaming, and basketball, which help
+    me stay disciplined, focused, and motivated.
+  </p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span class="info-icon">
+        <img src="assets/speed.jpg" alt="Running">
+      </span>
+      <h3>Running</h3>
+      <p>I love running for exercise and relaxation.</p>
+    </div>
+
+    <div class="info-card">
+      <span class="info-icon">
+        <img src="assets/bike.jpg" alt="Cycling">
+      </span>
+      <h3>Cycling</h3>
+      <p>I enjoy cycling for recreation and exploring new routes.</p>
+    </div>
+
+    <div class="info-card">
+      <span class="info-icon">
+        <img src="assets/game.jpg" alt="Mobile Gaming">
+      </span>
+      <h3>Mobile Gaming</h3>
+      <p>I spend time playing mobile games for fun and relaxation.</p>
+    </div>
+
+    <div class="info-card">
+      <span class="info-icon">
+        <img src="assets/ball.jpg" alt="Basketball">
+      </span>
+      <h3>Basketball</h3>
+      <p>I play basketball to stay active and have fun with friends.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section alt">
+  <p class="section-tag">Skills</p>
+  <h2 class="section-title">Technologies I use</h2>
+  <p class="section-lede">A quick look at what I build with day to day.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card"><span class="skill-icon">🔤</span><p>HTML</p></div>
+    <div class="skill-card"><span class="skill-icon">🎨</span><p>CSS</p></div>
+    <div class="skill-card"><span class="skill-icon">⚙️</span><p>JavaScript</p></div>
+    <div class="skill-card"><span class="skill-icon">🐙</span><p>GitHub</p></div>
+    <div class="skill-card"><span class="skill-icon">📐</span><p>Responsive Design</p></div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  
+  <p class="section-tag">Projects</p>
+  <h2 class="section-title">Things I've built</h2>
+  <p class="section-lede">A few academic and personal pieces I've put together while learning.</p>
+
+  <div class="project-grid">
+    <a href="#home" class="project-link">
+    <article class="project-card">
+      <div class="project-thumb">01</div>
+      <h3>Portfolio Website</h3>
+      <p>A responsive personal portfolio built to showcase my skills and projects.</p>
+    </article>
+    </a>
+<a href="projects/calculator/index.html" class="project-link">
+  <article class="project-card">
+    <div class="project-thumb">02</div>
+    <h3>Calculator</h3>
+    <p>A simple, functional calculator app focused on clean logic and UI.</p>
+  </article>
+</a>
+
+    <article class="project-card">
+      <a href="projects/Body Forge/home.html" class="project-link">
+      <div class="project-thumb">03</div>
+      <h3>Body Forge</h3>
+      <p>A lightweight task manager for organizing daily to-dos.</p>
+      </a>
+    </article>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+    <div class="contact-wrapper">
+        <div class="contact-item">
+            <p class="section-tag">Gmail</p>
+            <div class="contact-box">
+                kingginganarjujean@email.com
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <p class="section-tag">Facebook</p>
+            <a class="btn btn-primary"
+               href="https://www.facebook.com/arjujean.kinggingan.15"
+               target="_blank">
+                Arjujean Kinggingan
+            </a>
+        </div>
+    </div>
+</section>
+<footer>
+  <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+  <p>© 2026 Arjujean S. Kinggingan</p>
+  <p class="footer-sub">Designed and developed with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const phrases = ['Aspiring Web Developer', 'Frontend Developer', 'HTML • CSS • JavaScript'];
+  const roleEl = document.querySelector('.role');
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+  function tick() {
+    const current = phrases[phraseIndex];
+    let delay = 110;
+    if (!deleting) {
+      charIndex++;
+      roleEl.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) { deleting = true; delay = 1100; }
+    } else {
+      charIndex--;
+      roleEl.textContent = current.slice(0, charIndex);
+      delay = 55;
+      if (charIndex === 0) { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; delay = 300; }
+    }
+    setTimeout(tick, delay);
+  }
+  tick();
+</script>
+</body>
+</html>

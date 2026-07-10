@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate Strength Plan (6 Days) - BodyForge</title>
+    <link rel="stylesheet" href="../second.css" />
+    <link rel="stylesheet" href="interm.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+
+    <style>
+      /* ==========================
+       SIMPLE FADE CARD SWITCHER
+    =========================== */
+
+      .day-card {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+      }
+
+      /* Show Day 1 on first load */
+      #day1:target ~ .plan-wrapper #card1,
+      body:not(:target) .plan-wrapper #card1 {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Show Day 2 */
+      #day2:target ~ .plan-wrapper #card2 {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Show Day 3 */
+      #day3:target ~ .plan-wrapper #card3 {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="BodyForge Logo" />
+        <h2>Body Forge</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="../home.html" class="nav-btn-style active">Home</a></li>
+          <li><a href="../worksout.html" class="nav-btn-style">Workouts</a></li>
+          <li><a href="../contact.html" class="nav-btn-style">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="workout-section">
+      <h2>Intermediate Strength Training: 6-Day Foundation</h2>
+      <p>
+        "Maximize your muscle growth and raw strength potential with six
+        targeted sessions per week."
+      </p>
+
+      <!-- TARGETS ABOVE THE WRAPPER -->
+      <div id="day1"></div>
+      <div id="day2"></div>
+      <div id="day3"></div>
+      <div id="day4"></div>
+      <div id="day5"></div>
+      <div id="day6"></div>
+
+      <div class="plan-wrapper">
+        <!-- Arrows -->
+        <div class="arrow-nav">
+          <!-- Day 1 arrows -->
+          <a href="#day6" class="day-arrow day-arrow-left" id="nav-prev-1"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day2" class="day-arrow day-arrow-right" id="nav-next-1"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+
+          <!-- Day 2 arrows -->
+          <a href="#day1" class="day-arrow day-arrow-left" id="nav-prev-2"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day3" class="day-arrow day-arrow-right" id="nav-next-2"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+
+          <!-- Day 3 arrows -->
+          <a href="#day2" class="day-arrow day-arrow-left" id="nav-prev-3"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day4" class="day-arrow day-arrow-right" id="nav-next-3"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+
+          <a href="#day3" class="day-arrow day-arrow-left" id="nav-prev-4"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day5" class="day-arrow day-arrow-right" id="nav-next-4"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+
+          <a href="#day4" class="day-arrow day-arrow-left" id="nav-prev-5"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day6" class="day-arrow day-arrow-right" id="nav-next-5"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+
+          <a href="#day5" class="day-arrow day-arrow-left" id="nav-prev-6"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <a href="#day1" class="day-arrow day-arrow-right" id="nav-next-6"
+            ><i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="day-cards">
+          <!-- DAY 1 -->
+          <div class="workout-day-card" id="day-content-1">
+            <div class="day-indicator">Day 1 of 6</div>
+            <h3>Day 1: Upper Body Hypertrophy</h3>
+            <ol>
+              <li>Warm-up & Rotator Cuff Mobility.</li>
+              <li>Barbell Bench Press: 4 sets of 8-10 reps.</li>
+              <li>Lat Pulldown: 4 sets of 8-10 reps.</li>
+              <li>Incline Dumbbell Press: 3 sets of 10-12 reps.</li>
+              <li>Cool-down & Stretching (5 min).</li>
+            </ol>
+          </div>
+
+          <!-- DAY 2 -->
+          <div class="workout-day-card" id="day-content-2">
+            <div class="day-indicator">Day 2 of 6</div>
+            <h3>Day 2: Lower Body Strength</h3>
+            <ol>
+              <li>Warm-up & Leg Swings.</li>
+              <li>Barbell Squat: 4 sets of 5 reps (Heavy).</li>
+              <li>Romanian Deadlift (RDL): 3 sets of 8 reps.</li>
+              <li>Leg Extension: 3 sets of 12-15 reps (Burnout).</li>
+              <li>Cool-down (5 min).</li>
+            </ol>
+          </div>
+
+          <!-- DAY 3 -->
+          <div class="workout-day-card" id="day-content-3">
+            <div class="day-indicator">Day 3 of 6</div>
+            <h3>Day 3: Off / Active Recovery</h3>
+            <ol>
+              <li>Low-Intensity Cardio (30 min walk/cycle).</li>
+              <li>Foam Rolling (15 min).</li>
+              <li>
+                Off-Bike: 15 min of Hip Flexor and Hamstring static stretching.
+              </li>
+              <li>Stretching (15 min targeted areas).</li>
+              <li>Core: 3 sets of 15 Cable Crunches.</li>
+            </ol>
+          </div>
+
+          <div class="workout-day-card" id="day-content-4">
+            <div class="day-indicator">Day 4 of 6</div>
+            <h3>Day 4: Upper Body Strength</h3>
+            <ol>
+              <li>Warm-up: 10 min.</li>
+              <li>Overhead Barbell Press: 4 sets of 5 reps (Heavy).</li>
+              <li>Pull-ups (or Assisted): 3 sets to Max Reps.</li>
+              <li>Dumbbell Row: 3 sets of 6-8 reps (Heavy).</li>
+              <li>Cool-down: 5 min.</li>
+            </ol>
+          </div>
+
+          <div class="workout-day-card" id="day-content-5">
+            <div class="day-indicator">Day 5 of 6</div>
+            <h3>Day 5: Lower Body Hypertrophy</h3>
+            <ol>
+              <li>Warm-up: 10 min.</li>
+              <li>
+                Leg Press: 4 sets of 10-12 reps & Hamstring Curl: 4 sets of
+                10-12 reps.
+              </li>
+              <li>
+                Bulgarian Split Squat: 3 sets of 10 reps per leg & Calf Raise
+                (Standing): 4 sets of 15-20 reps.
+              </li>
+              <li>Cool-down & Hydration (5 min).</li>
+            </ol>
+          </div>
+
+          <div class="workout-day-card" id="day-content-6">
+            <div class="day-indicator">Day 6 of 6</div>
+            <h3>Day 6: Full Body Density</h3>
+            <ol>
+              <li>Warm-up: 10 min.</li>
+              <li>
+                Barbell Clean & Press: 3 sets of 6 reps (Technical Focus).
+              </li>
+              <li>Weighted Push-ups: 3 sets to failure.</li>
+              <li>Kettlebell Swings: 3 sets of 15 reps.</li>
+              <li>Cool-down (15 min).</li>
+            </ol>
+          </div>
+        </div>
+        <!-- end .day-cards -->
+      </div>
+      <!-- end .plan-wrapper -->
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 BodyForge Fitness. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+/* --- CARD FADE SWITCHER (PURE CSS) --- */
+
+/* Stack all cards on top of each other */
+.day-cards {
+  position: relative;
+  height: 100%;
+  min-height: 450px; /* so container doesn't collapse */
+}
+
+/* All cards start hidden */
+
+.workout-day-card {
+  padding: 40px;
+  background: #181818;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+
+  position: absolute; /* still stacked */
+  top: 0;
+  left: 0;
+  width: 100%; /* full width */
+
+  opacity: 0; /* fade system */
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
+  /* REMOVE fixed height; allow content to decide */
+  min-height: unset;
+  height: auto;
+}
+
+.workout-day-card h3 {
+  font-size: 2rem;
+  color: #ff4500;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 10px;
+}
+
+.workout-day-card ol {
+  list-style: none;
+  padding: 0;
+}
+
+.workout-day-card ol li {
+  background: #101010;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-left: 3px solid #ff4500;
+  border-bottom: 3px solid #ff4500;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.workout-day-card .exercise-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.workout-day-card .exercise-details {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Default visible card = Day 1 */
+#day-content-1 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Day 1 target */
+#day1:target ~ .plan-wrapper .day-cards #day-content-1 {
+  opacity: 1;
+  pointer-events: auto;
+}
+#day1:target ~ .plan-wrapper .day-cards #day-content-2,
+#day1:target ~ .plan-wrapper .day-cards #day-content-3 {
+  opacity: 0;
+}
+
+/* Day 2 target */
+#day2:target ~ .plan-wrapper .day-cards #day-content-2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+#day2:target ~ .plan-wrapper .day-cards #day-content-1,
+#day2:target ~ .plan-wrapper .day-cards #day-content-3 {
+  opacity: 0;
+}
+
+/* Day 3 target */
+#day3:target ~ .plan-wrapper .day-cards #day-content-3 {
+  opacity: 1;
+  pointer-events: auto;
+}
+#day3:target ~ .plan-wrapper .day-cards #day-content-1,
+#day3:target ~ .plan-wrapper .day-cards #day-content-2 {
+  opacity: 0;
+}
+
+/* --- ARROW VISIBILITY LOGIC --- */
+
+/* Hide everything first */
+.arrow-nav a {
+  display: none;
+}
+
+/* Default (no target = Day1) */
+#nav-prev-1,
+#nav-next-1 {
+  display: flex;
+}
+
+/* Day 1 targeted */
+#day1:target ~ .plan-wrapper .arrow-nav #nav-prev-1,
+#day1:target ~ .plan-wrapper .arrow-nav #nav-next-1 {
+  display: flex;
+}
+
+/* Day 2 targeted */
+#day2:target ~ .plan-wrapper .arrow-nav #nav-prev-2,
+#day2:target ~ .plan-wrapper .arrow-nav #nav-next-2 {
+  display: flex;
+}
+
+/* Day 3 targeted */
+#day3:target ~ .plan-wrapper .arrow-nav #nav-prev-3,
+#day3:target ~ .plan-wrapper .arrow-nav #nav-next-3 {
+  display: flex;
+}
+
+/* --- ARROW NAVIGATION STYLES --- */
+
+.plan-wrapper {
+  position: relative; /* Container for absolute arrows */
+  max-width: 1000px;
+  margin: 40px auto;
+  margin-bottom: -10px;
+}
+
+/* Base Arrow Styling */
+.day-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #ff4500;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15; /* Above the day-slider content */
+  transition: 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+  text-decoration: none; /* Make it look like a button/link */
+  user-select: none;
+}
+
+.day-arrow:hover {
+  background: #ff5a1f;
+  color: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.day-arrow-left {
+  left: -70px; /* Position outside the card area */
+}
+
+.day-arrow-right {
+  right: -70px; /* Position outside the card area */
+}
+
+/* Day Counter/Indicator */
+.day-indicator {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(255, 69, 0, 0.2);
+  color: #ff4500;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 5;
+}
+
+/* The container for the arrows, used for pure CSS show/hide logic in HTML <style> */
+.arrow-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+
+/* Hide the old day-nav element */
+.day-nav {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1100px) {
+  /* Bring arrows inside the card area on smaller screens */
+  .day-arrow-left {
+    left: 10px;
+  }
+  .day-arrow-right {
+    right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .workout-day-card {
+    padding: 20px;
+  }
+  .workout-day-card h3 {
+    font-size: 1.5rem;
+  }
+  .workout-day-card ol li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .workout-day-card .exercise-details {
+    margin-top: 5px;
+  }
+}
+
+/* Ensure day 1 sets the initial height before any navigation */
+.day-cards:not(:has(:target)) #day-content-1 {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#day1,
+#day2,
+#day3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

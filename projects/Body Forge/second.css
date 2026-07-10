@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0c0c0c;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* --- Navigation Bar --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10%;
+  background: linear-gradient(180deg, #e13e03f0, #000000);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #111;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff4500;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+/* Navigation links */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+/* Applying button-like design to all navigation links */
+.nav-btn-style {
+  padding: 8px 20px;
+  border-radius: 40px;
+  transition: 0.3s ease;
+  margin-right: -13px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  /* Replaces the old underline with the button styling */
+  color: #fff !important;
+  background: #ff4500;
+  border-bottom: none !important;
+}
+
+/* Workout Section */
+.workout-section {
+  padding: 130px 10% 80px;
+  text-align: center;
+}
+
+.workout-section h2 {
+  color: #ff4500;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.workout-section p {
+  color: #ccc;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+/* Grid */
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+/* Cards */
+.workout-card {
+  background: #181818;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.35s;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.workout-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.25);
+}
+
+.workout-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-body h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.card-body p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: #ff4500;
+  padding: 12px 32px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff5a1f;
+  transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+footer {
+  background: #0d0d0d;
+  padding: 40px 10%;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
+.social-icons a {
+  color: #ff4500;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+  font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+  color: #ff6a2d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workout-section h2 {
+    font-size: 2rem;
+  }
+}
